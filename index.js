@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
-const port = 3000;
 const uri = process.env.MONGO_URL;
 
 mongoose.connect(uri, {
@@ -44,6 +43,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Server running`);
 });
