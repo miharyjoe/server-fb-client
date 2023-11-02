@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: server-service-client
+    buildCommand: npm install
+    startCommand: npm start
